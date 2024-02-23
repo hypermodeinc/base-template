@@ -7,8 +7,11 @@ on:
       - synchronize
       - reopened
       - ready_for_review
+  push:
+    branches:
+      - main
 jobs:
-  as-lint:
+  build:
     name: build
     runs-on: ubuntu-latest
     defaults:
