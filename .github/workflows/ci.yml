@@ -9,7 +9,7 @@ on:
       - ready_for_review
 jobs:
   as-lint:
-    name: Lint
+    name: build
     runs-on: ubuntu-latest
     defaults:
       run:
