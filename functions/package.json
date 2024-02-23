@@ -1,0 +1,35 @@
+{
+  "name": "sample",
+  "private": true,
+  "version": "1.0.0",
+  "description": "Hypermode Functions Sample",
+  "author": "Hypermode, Inc.",
+  "license": "MIT",
+  "type": "module",
+  "scripts": {
+    "build:debug": "asc assembly/index.ts --target debug",
+    "build:release": "asc assembly/index.ts --target release",
+    "build": "npm run build:debug && npm run build:release",
+    "pretty": "prettier --write .",
+    "pretty:check": "prettier --check .",
+    "lint": "eslint --ext .ts .",
+    "lint:fix": "eslint --ext .ts --fix ."
+  },
+  "dependencies": {
+    "@hypermode/functions-as": "^0.1.0",
+    "json-as": "^0.7.3"
+  },
+  "devDependencies": {
+    "@assemblyscript/wasi-shim": "^0.1.0",
+    "@typescript-eslint/eslint-plugin": "^7.0.2",
+    "@typescript-eslint/parser": "^7.0.2",
+    "assemblyscript": "^0.27.24",
+    "assemblyscript-prettier": "^3.0.1",
+    "eslint": "^8.57.0",
+    "prettier": "^3.2.5",
+    "visitor-as": "^0.11.4"
+  },
+  "overrides": {
+    "assemblyscript": "$assemblyscript"
+  }
+}
