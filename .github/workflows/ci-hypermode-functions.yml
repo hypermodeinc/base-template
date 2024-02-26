@@ -25,5 +25,5 @@ jobs:
       - name: Publish GitHub artifact
         uses: actions/upload-artifact@v4
         with:
-          name: build
+          name: hypermode-wasm
           path: functions/build/release.wasm
