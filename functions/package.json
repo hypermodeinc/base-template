@@ -1,7 +1,7 @@
 {
   "name": "sample",
   "private": true,
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "Hypermode Functions Sample",
   "author": "Hypermode, Inc.",
   "license": "MIT",
@@ -16,14 +16,14 @@
     "lint:fix": "eslint --ext .ts --fix ."
   },
   "dependencies": {
-    "@hypermode/functions-as": "^0.1.0",
+    "@hypermode/functions-as": "^0.3.0",
     "json-as": "^0.7.3"
   },
   "devDependencies": {
     "@assemblyscript/wasi-shim": "^0.1.0",
-    "@typescript-eslint/eslint-plugin": "^7.0.2",
-    "@typescript-eslint/parser": "^7.0.2",
-    "assemblyscript": "^0.27.24",
+    "@typescript-eslint/eslint-plugin": "^7.3.1",
+    "@typescript-eslint/parser": "^7.3.1",
+    "assemblyscript": "^0.27.25",
     "assemblyscript-prettier": "^3.0.1",
     "eslint": "^8.57.0",
     "prettier": "^3.2.5",
