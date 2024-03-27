@@ -7,9 +7,10 @@
   "license": "MIT",
   "type": "module",
   "scripts": {
-    "build:debug": "asc assembly/index.ts --target debug",
-    "build:release": "asc assembly/index.ts --target release",
-    "build": "npm run build:debug && npm run build:release",
+    "build": "run-script-os",
+    "build:windows": "asc assembly\\index.ts -o build\\%npm_package_name%.wasm --target debug",
+    "build:default": "asc assembly/index.ts -o build/$npm_package_name.wasm --target debug",
+    "build:release": "asc assembly/index.ts -o build/$npm_package_name.wasm --target release",
     "pretty": "prettier --write .",
     "pretty:check": "prettier --check .",
     "lint": "eslint --ext .ts .",
@@ -27,6 +28,7 @@
     "assemblyscript-prettier": "^3.0.1",
     "eslint": "^8.57.0",
     "prettier": "^3.2.5",
+    "run-script-os": "^1.1.6",
     "visitor-as": "^0.11.4"
   },
   "overrides": {
