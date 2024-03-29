@@ -1,34 +1,17 @@
 {
-  "modelSpecs": [
+  "models": [
     {
-      "name": "msp-523a8138-76b3-406f-9386-c53aa9b23c44",
-      "type": "classifier",
-      "endpoint": "https://nerpndlnl6.execute-api.us-east-1.amazonaws.com/dev/classifier"
-    },
-    {
-      "name": "embedding-spec-1",
-      "type": "embedding",
-      "endpoint": "https://v8ky4au1rd.execute-api.us-east-1.amazonaws.com/dev/embedding"
+      "name": "sentiment-classifier",
+      "task": "classification",
+      "sourceModel": "distilbert/distilbert-base-uncased",
+      "provider": "hugging-face",
+      "host": "hypermode"
     }
   ],
-  "embeddingSpecs": [
+  "hosts": [
     {
-      "entity-type": "Company",
-      "attribute": "embedding",
-      "modelName": "embedding-spec-1",
-      "config": {
-        "query": "{ about sector industry }",
-        "template": "A {{sector}} company in the {{industry}} industry, {{about}}"
-      }
-    }
-  ],
-  "trainingInstructions": [
-    {
-      "modelName": "msp-523a8138-76b3-406f-9386-c53aa9b23c44",
-      "labels": [
-        "spam",
-        "not spam"
-      ]
+      "name": "openai"
+      "endpoint": "https://api.openai.com/v1"
     }
   ]
 }
