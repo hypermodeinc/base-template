@@ -1,30 +1,27 @@
 {
   "name": "sample",
   "private": true,
-  "version": "1.1.0",
+  "version": "1.2.0",
   "description": "Hypermode Functions Sample",
   "author": "Hypermode, Inc.",
   "license": "MIT",
   "type": "module",
   "scripts": {
-    "build": "run-script-os",
-    "build:windows": "asc assembly\\index.ts -o build\\%npm_package_name%.wasm --target debug",
-    "build:default": "asc assembly/index.ts -o build/$npm_package_name.wasm --target debug",
-    "build:release": "asc assembly/index.ts -o build/$npm_package_name.wasm --target release",
+    "build": "node ./node_modules/@hypermode/functions-as/bin/build-plugin.js",
     "pretty": "prettier --write .",
     "pretty:check": "prettier --check .",
     "lint": "eslint --ext .ts .",
     "lint:fix": "eslint --ext .ts --fix ."
   },
   "dependencies": {
-    "@hypermode/functions-as": "^0.4.0",
-    "json-as": "^0.8.1"
+    "@hypermode/functions-as": "^0.5.0",
+    "json-as": "^0.8.2"
   },
   "devDependencies": {
     "@assemblyscript/wasi-shim": "^0.1.0",
-    "@typescript-eslint/eslint-plugin": "^7.4.0",
-    "@typescript-eslint/parser": "^7.4.0",
-    "assemblyscript": "^0.27.25",
+    "@typescript-eslint/eslint-plugin": "^7.7.0",
+    "@typescript-eslint/parser": "^7.7.0",
+    "assemblyscript": "^0.27.27",
     "assemblyscript-prettier": "^3.0.1",
     "eslint": "^8.57.0",
     "prettier": "^3.2.5",
