@@ -1,9 +1,35 @@
-import { JSON } from "json-as";
-import { model } from "@hypermode/functions-as";
+import { model, ClassificationResult } from "@hypermode/functions-as";
 
-const modelId = "msp-523a8138-76b3-406f-9386-c53aa9b23c44";
+export function testClassifier(text: string): ClassificationResult {
+  const modelId = "my_classifier";
+  return model.classifyText(modelId, text);
+}
 
-export function testClassifier(text: string): string {
-  const results = model.classifyText(modelId, text);
-  return JSON.stringify(results);
+export function getPeople(): Person[] {
+  return [
+    {
+      name: "Alice",
+      age: 30,
+      favorites: [{ name: "roses" }, { name: "kittens" }],
+    },
+    {
+      name: "Bob",
+      age: 40,
+      favorites: [{ name: "packages" }, { name: "string" }],
+    },
+  ];
+}
+
+export function getPerson(): Person {
+  return getPeople()[0];
+}
+
+class Person {
+  name!: string;
+  age: i32 = 0;
+  favorites: Thing[] = [];
+}
+
+class Thing {
+  name!: string;
 }
