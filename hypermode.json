@@ -10,8 +10,9 @@
   ],
   "hosts": [
     {
-      "name": "openai"
-      "endpoint": "https://api.openai.com/v1"
+      "name": "openai",
+      "endpoint": "https://api.openai.com/v1",
+      "authHeader": "x-api-key"
     }
   ]
 }
