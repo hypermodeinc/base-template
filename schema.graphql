@@ -1,0 +1,5 @@
+directive @hm_function on FIELD_DEFINITION
+
+type Query {
+  testClassifier(text: String!): String! @lambda @hm_function
+}

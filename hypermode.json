@@ -1,10 +1,17 @@
 {
   "models": [
     {
-      "name": "my_classifier",
+      "name": "sentiment-classifier",
       "task": "classification",
-      "endpoint": "https://nerpndlnl6.execute-api.us-east-1.amazonaws.com/dev/classifier",
-      "authHeader": "x-api-key"
+      "sourceModel": "distilbert/distilbert-base-uncased-finetuned-sst-2-english",
+      "provider": "hugging-face",
+      "host": "hypermode"
+    }
+  ],
+  "hosts": [
+    {
+      "name": "openai",
+      "endpoint": "https://api.openai.com/v1"
     }
   ]
 }
