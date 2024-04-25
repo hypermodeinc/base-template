@@ -14,7 +14,7 @@
     "lint:fix": "eslint --ext .ts --fix ."
   },
   "dependencies": {
-    "@hypermode/functions-as": "^0.6.0",
+    "@hypermode/functions-as": "^0.6.1",
     "json-as": "^0.8.2"
   },
   "devDependencies": {
