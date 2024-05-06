@@ -1,5 +1,5 @@
 {
-  "$schema": "https://raw.githubusercontent.com/gohypermode/manifest/latest/hypermode.schema.json",
+  "$schema": "https://manifest.hypermode.com/hypermode.json",
   "models": [
     {
       "name": "sentiment_classifier",
