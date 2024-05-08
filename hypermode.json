@@ -2,7 +2,7 @@
   "$schema": "https://manifest.hypermode.com/hypermode.json",
   "models": [
     {
-      "name": "sentiment_classifier",
+      "name": "sentiment-classifier",
       "task": "classification",
       "sourceModel": "distilbert/distilbert-base-uncased-finetuned-sst-2-english",
       "provider": "hugging-face",
