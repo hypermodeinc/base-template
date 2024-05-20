@@ -8,7 +8,7 @@ on:
       - main
 
 permissions:
-  contents: read      
+  contents: read
 
 jobs:
   build:
@@ -31,4 +31,6 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: build
-          path: functions/build/*
+          path: |
+            hypermode.json
+            functions/build/*
