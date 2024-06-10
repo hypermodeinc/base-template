@@ -15,7 +15,7 @@
   },
   "dependencies": {
     "@hypermode/functions-as": "^0.7.0",
-    "json-as": "^0.8.3"
+    "json-as": "^0.8.4"
   },
   "devDependencies": {
     "@assemblyscript/wasi-shim": "^0.1.0",
