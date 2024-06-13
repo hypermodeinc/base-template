@@ -4,8 +4,18 @@ updates:
     directory: "/functions"
     schedule:
       interval: "weekly"
+      day: "wednesday"
+      time: "16:00"
+    groups:
+      minor-and-patch:
+        applies-to: version-updates
+        update-types:
+          - "minor"
+          - "patch"
 
   - package-ecosystem: "github-actions"
     directory: "/"
     schedule:
       interval: "weekly"
+      day: "wednesday"
+      time: "16:00"
