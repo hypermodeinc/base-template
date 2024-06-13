@@ -1,19 +1,6 @@
 {
-  "extends": "./node_modules/@assemblyscript/wasi-shim/asconfig.json",
+  "extends": "./node_modules/@hypermode/functions-as/plugin.asconfig.json",
   "options": {
-    "transform": ["@hypermode/functions-as/transform", "json-as/transform"],
-    "exportRuntime": true
-  },
-  "targets": {
-    "debug": {
-      "sourceMap": true,
-      "debug": true
-    },
-    "release": {
-      "optimizeLevel": 3,
-      "shrinkLevel": 0,
-      "converge": false,
-      "noAssert": false
-    }
+    "transform": ["@hypermode/functions-as/transform", "json-as/transform"]
   }
 }
