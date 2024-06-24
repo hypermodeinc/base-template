@@ -15,12 +15,12 @@
   },
   "dependencies": {
     "@hypermode/functions-as": "^0.9.0",
-    "@hypermode/models-as": "^0.1.6",
+    "@hypermode/models-as": "^0.2.1",
     "json-as": "^0.9.8"
   },
   "devDependencies": {
-    "@typescript-eslint/eslint-plugin": "^7.13.1",
-    "@typescript-eslint/parser": "^7.13.1",
+    "@typescript-eslint/eslint-plugin": "^7.14.1",
+    "@typescript-eslint/parser": "^7.14.1",
     "assemblyscript": "^0.27.28",
     "assemblyscript-prettier": "^3.0.1",
     "eslint": "^8.57.0",
