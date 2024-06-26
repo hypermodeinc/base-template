@@ -1,7 +1,7 @@
 {
   "name": "sample",
   "private": true,
-  "version": "1.2.0",
+  "version": "1.0.0",
   "description": "Hypermode Functions Sample",
   "author": "Hypermode, Inc.",
   "license": "MIT",
@@ -14,7 +14,7 @@
     "lint:fix": "eslint --ext .ts --fix ."
   },
   "dependencies": {
-    "@hypermode/functions-as": "^0.9.1",
+    "@hypermode/functions-as": "^0.9.2",
     "@hypermode/models-as": "^0.2.1",
     "json-as": "^0.9.8"
   },
