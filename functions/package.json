@@ -16,7 +16,7 @@
   "dependencies": {
     "@hypermode/functions-as": "^0.9.4",
     "@hypermode/models-as": "^0.2.1",
-    "json-as": "^0.9.12"
+    "json-as": "^0.9.13"
   },
   "devDependencies": {
     "@typescript-eslint/eslint-plugin": "^7.16.0",
