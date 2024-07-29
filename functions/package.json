@@ -19,8 +19,8 @@
     "json-as": "^0.9.20"
   },
   "devDependencies": {
-    "@typescript-eslint/eslint-plugin": "^7.17.0",
-    "@typescript-eslint/parser": "^7.17.0",
+    "@typescript-eslint/eslint-plugin": "^7.18.0",
+    "@typescript-eslint/parser": "^7.18.0",
     "assemblyscript": "^0.27.29",
     "assemblyscript-prettier": "^3.0.1",
     "eslint": "^8.57.0",
