@@ -14,23 +14,33 @@ jobs:
   build:
     name: build
     runs-on: ubuntu-latest
-    defaults:
-      run:
-        working-directory: functions
     steps:
       - uses: actions/checkout@v4
       - name: Setup Node
         uses: actions/setup-node@v4
         with:
           node-version: ">=20"
+      - name: Locate directory with hypermode.json
+        id: set-dir
+        run: |
+          HYPERMODE_JSON=$(find $(pwd) -name 'hypermode.json' -print0 | xargs -0 -n1 echo)
+          if [ -n "$HYPERMODE_JSON" ]; then
+            HYPERMODE_DIR=$(dirname "$HYPERMODE_JSON")
+            echo "HYPERMODE_DIR=$HYPERMODE_DIR" >> $GITHUB_ENV
+          else
+            echo "hypermode.json not found"
+            exit 1
+          fi
       - name: Install dependencies
         run: npm install
+        working-directory: ${{ env.HYPERMODE_DIR }}/functions
       - name: Build the project
         run: npm run build release
+        working-directory: ${{ env.HYPERMODE_DIR }}/functions
       - name: Publish GitHub artifact
         uses: actions/upload-artifact@v4
         with:
           name: build
           path: |
-            hypermode.json
-            functions/build/*
+            ${{ env.HYPERMODE_DIR }}/hypermode.json
+            ${{ env.HYPERMODE_DIR }}/functions/build/*
