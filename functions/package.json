@@ -8,24 +8,24 @@
   "type": "module",
   "scripts": {
     "build": "node ./node_modules/@hypermode/functions-as/bin/build-plugin.js",
+    "lint": "eslint .",
     "pretty": "prettier --write .",
-    "pretty:check": "prettier --check .",
-    "lint": "eslint --ext .ts .",
-    "lint:fix": "eslint --ext .ts --fix ."
+    "pretty:check": "prettier --check ."
   },
   "dependencies": {
-    "@hypermode/functions-as": "^0.10.4",
+    "@hypermode/functions-as": "^0.10.5",
     "@hypermode/models-as": "^0.2.2",
     "json-as": "^0.9.20"
   },
   "devDependencies": {
-    "@typescript-eslint/eslint-plugin": "^7.18.0",
-    "@typescript-eslint/parser": "^7.18.0",
+    "@eslint/js": "^9.8.0",
+    "@types/eslint__js": "^8.42.3",
     "assemblyscript": "^0.27.29",
     "assemblyscript-prettier": "^3.0.1",
-    "eslint": "^8.57.0",
+    "eslint": "^9.8.0",
     "prettier": "^3.3.3",
     "typescript": "^5.5.4",
+    "typescript-eslint": "^8.0.0",
     "visitor-as": "^0.11.4"
   },
   "overrides": {
