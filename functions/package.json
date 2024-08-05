@@ -15,7 +15,7 @@
   "dependencies": {
     "@hypermode/functions-as": "^0.10.5",
     "@hypermode/models-as": "^0.2.2",
-    "json-as": "^0.9.20"
+    "json-as": "^0.9.21"
   },
   "devDependencies": {
     "@eslint/js": "^9.8.0",
@@ -25,7 +25,7 @@
     "eslint": "^9.8.0",
     "prettier": "^3.3.3",
     "typescript": "^5.5.4",
-    "typescript-eslint": "^8.0.0",
+    "typescript-eslint": "^8.0.1",
     "visitor-as": "^0.11.4"
   },
   "overrides": {
