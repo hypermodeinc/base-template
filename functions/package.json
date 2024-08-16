@@ -12,7 +12,7 @@
     "pretty:check": "prettier --check ."
   },
   "dependencies": {
-    "@hypermode/functions-as": "^0.11.0",
+    "@hypermode/functions-as": "^0.11.1",
     "@hypermode/models-as": "^0.2.3",
     "json-as": "^0.9.21"
   },
