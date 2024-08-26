@@ -17,14 +17,14 @@
     "json-as": "^0.9.21"
   },
   "devDependencies": {
-    "@eslint/js": "^9.9.0",
+    "@eslint/js": "^9.9.1",
     "@types/eslint__js": "^8.42.3",
     "assemblyscript": "^0.27.29",
     "assemblyscript-prettier": "^3.0.1",
-    "eslint": "^9.9.0",
+    "eslint": "^9.9.1",
     "prettier": "^3.3.3",
     "typescript": "^5.5.4",
-    "typescript-eslint": "^8.2.0",
+    "typescript-eslint": "^8.3.0",
     "visitor-as": "^0.11.4"
   },
   "overrides": {
