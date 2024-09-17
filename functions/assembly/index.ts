@@ -1,18 +1,22 @@
 import { models } from "@hypermode/functions-as";
-import { ClassificationModel } from "@hypermode/models-as/models/experimental/classification";
+import {
+  OpenAIChatModel,
+  SystemMessage,
+  UserMessage,
+} from "@hypermode/models-as/models/openai/chat";
+const modelName = "text-generator";
 
-const modelName = "sentiment-classifier";
-const threshold: f32 = 0.5;
+export function generateText(text: string): string {
+  const model = models.getModel<OpenAIChatModel>(modelName);
 
-export function testClassifier(text: string): string {
-  const model = models.getModel<ClassificationModel>(modelName);
-  const input = model.createInput([text]);
+  const input = model.createInput([
+    new SystemMessage("You are a helpful assistant."),
+    new UserMessage(text),
+  ]);
+
+  input.temperature = 0.7;
+
   const output = model.invoke(input);
 
-  const prediction = output.predictions[0];
-  if (prediction.confidence >= threshold) {
-    return prediction.label;
-  }
-
-  return "";
+  return output.choices[0].message.content.trim();
 }
