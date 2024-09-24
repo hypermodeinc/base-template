@@ -15,6 +15,7 @@ export function generateText(text: string): string {
   ]);
 
   input.temperature = 0.7;
+  input.maxTokens = 200;
 
   const output = model.invoke(input);
 
