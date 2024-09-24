@@ -10,7 +10,9 @@ export function generateText(text: string): string {
   const model = models.getModel<OpenAIChatModel>(modelName);
 
   const input = model.createInput([
-    new SystemMessage("You are a helpful assistant."),
+    new SystemMessage(
+      "You are a helpful assistant. Limit your answers to 150 words.",
+    ),
     new UserMessage(text),
   ]);
 
