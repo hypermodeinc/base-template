@@ -4,20 +4,14 @@ import {
   SystemMessage,
   UserMessage,
 } from "@hypermode/models-as/models/openai/chat";
-const modelName = "text-generator";
 
 export function generateText(text: string): string {
-  const model = models.getModel<OpenAIChatModel>(modelName);
+  const model = models.getModel<OpenAIChatModel>("text-generator");
 
   const input = model.createInput([
-    new SystemMessage(
-      "You are a helpful assistant. Limit your answers to 150 words.",
-    ),
+    new SystemMessage("You are a helpful assistant."),
     new UserMessage(text),
   ]);
-
-  input.temperature = 0.7;
-  input.maxTokens = 200;
 
   const output = model.invoke(input);
 
