@@ -9,7 +9,7 @@ export function generateText(text: string): string {
   const model = models.getModel<OpenAIChatModel>("text-generator");
 
   const input = model.createInput([
-    new SystemMessage("You are a helpful assistant."),
+    new SystemMessage("You are a helpful assistant. Reply using surfing analogies and metaphors."),
     new UserMessage(text),
   ]);
 
